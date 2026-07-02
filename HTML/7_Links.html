@@ -1,0 +1,452 @@
+<!-- ========================================================= -->
+<!-- HTML LINKS -->
+<!-- ========================================================= -->
+
+<!--
+
+The <a> (Anchor) element creates hyperlinks that connect one webpage, file, email address, phone number, or section of a page to another.
+
+Syntax:
+<a href="URL">Link Text</a>
+
+Benefits:
+
+✔ Website Navigation
+✔ Internal Linking
+✔ External Linking
+✔ SEO
+✔ Accessibility
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Links</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+</head>
+
+<body>
+    <h1 id="top">HTML Links Examples</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, consectetur! Maiores nobis obcaecati voluptatibus maxime id tenetur voluptates quam ipsum in? Ipsa, incidunt delectus porro sint provident similique sapiente consequatur veniam itaque, soluta fugit iste velit asperiores quaerat nisi, magnam optio tempore cumque dolore ipsam reiciendis dolorum sed fugiat quibusdam. Iusto quia incidunt eum placeat eaque, expedita praesentium odio repudiandae vitae? Nulla cum consectetur, qui nemo doloribus similique earum voluptates suscipit maxime corporis? Inventore consequuntur eius maiores suscipit possimus qui harum, repellat quo temporibus eos unde debitis sequi similique hic reiciendis et facilis at odio recusandae illo commodi, sint voluptas cum. In nobis eius consequatur rem nam. Omnis molestias esse, enim delectus quam adipisci quis dolor officiis eaque architecto illum deserunt voluptatibus doloribus veritatis necessitatibus quod molestiae mollitia sunt, qui eos quos! Harum similique alias sapiente ea adipisci, error natus illum doloribus ut ex sint, repellendus neque optio dolorem tenetur rem ad.</p>
+
+    <br /><br />
+    <!-- Absolute URL -->
+    <a href="https://developer.mozilla.org/"> MDN Web Docs </a>
+
+    <br><br>
+
+    <!-- Relative URL -->
+    <a href="4_TextContent.html"> Test Page </a>
+
+    <br><br>
+
+    <!-- Open in New Tab -->
+    <a
+        href="https://google.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Opens in a new tab">
+        Open Website
+    </a>
+
+    <br><br>
+
+    <!-- Download File -->
+    <a href="../Notes/HTML.pdf" download>
+        Download Notes
+    </a>
+
+    <br><br>
+
+    <!-- Email -->
+    <a href="mailto:example@email.com" title="Send an email">
+        Send Email
+    </a>
+
+    <br><br>
+
+    <!-- Phone -->
+    <a href="tel:+911234567890" title="Call now">
+        Call Now
+    </a>
+
+    <br><br>
+
+    <!-- Fragment Link -->
+    <a href="#bottom" title="Go to bottom">
+        Go to Bottom
+    </a>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, consectetur! Maiores nobis obcaecati voluptatibus maxime id tenetur voluptates quam ipsum in? Ipsa, incidunt delectus porro sint provident similique sapiente consequatur veniam itaque, soluta fugit iste velit asperiores quaerat nisi, magnam optio tempore cumque dolore ipsam reiciendis dolorum sed fugiat quibusdam. Iusto quia incidunt eum placeat eaque, expedita praesentium odio repudiandae vitae? Nulla cum consectetur, qui nemo doloribus similique earum voluptates suscipit maxime corporis? Inventore consequuntur eius maiores suscipit possimus qui harum, repellat quo temporibus eos unde debitis sequi similique hic reiciendis et facilis at odio recusandae illo commodi, sint voluptas cum.</p>
+    <br><br><br><br>
+
+    <h2 id="bottom">Bottom of Page</h2>
+
+    <a href="#top" title="Back to top">
+        Back to Top
+    </a>
+
+</body>
+
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <a> (Anchor Element) -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Creates hyperlinks.
+
+Syntax: <a href="URL">Link</a>
+
+Example:
+
+<a href="about.html">
+About
+</a>
+
+Without href, an <a> element is not a hyperlink.
+-->
+
+<!-- ========================================================= -->
+<!-- 2. href -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: href
+
+Purpose: Specifies the destination of the link.
+
+Example:
+
+<a href="contact.html">
+Contact
+</a>
+
+Supports:
+
+✔ Web Pages
+✔ Files
+✔ Email
+✔ Phone
+✔ Fragment Links
+-->
+
+<!-- ========================================================= -->
+<!-- 3. target -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: target
+
+Purpose: Specifies where the linked document opens.
+
+Values:
+
+_self
+(Default)
+
+_blank
+(New tab/window)
+
+_parent
+
+_top
+
+Example:
+
+<a
+href="https://google.com"
+target="_blank"
+rel="noopener noreferrer"
+title="Opens in a new tab">
+
+Open Website
+
+</a>
+-->
+
+<!-- ========================================================= -->
+<!-- 4. rel -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: rel
+Purpose: Defines the relationship between the current page and the linked resource.
+
+Common Values:
+
+noopener
+noreferrer
+nofollow
+ugc
+sponsored
+
+Example:
+
+<a
+href="https://google.com"
+target="_blank"
+rel="noopener noreferrer"
+title="Opens in a new tab">
+
+Website
+
+</a>
+
+Best Practice: 
+
+Always use
+rel="noopener noreferrer"
+with
+target="_blank".
+-->
+
+<!-- ========================================================= -->
+<!-- 5. download -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: download
+Purpose: Downloads a file instead of opening it.
+
+Example:
+
+<a
+href="resume.pdf"
+download>
+
+Download Resume
+
+</a>
+
+Optional:
+
+<a
+href="resume.pdf"
+download="MyResume.pdf">
+
+Download
+
+</a>
+-->
+
+<!-- ========================================================= -->
+<!-- 6. mailto -->
+<!-- ========================================================= -->
+
+<!--
+Protocol: mailto:
+Purpose: Opens the user's default email application.
+
+Example:
+
+<a
+href="mailto:john@example.com">
+Email John
+</a>
+
+With Subject:
+
+<a
+href="mailto:john@example.com?subject=Hello">
+
+Send Email
+
+</a>
+-->
+
+<!-- ========================================================= -->
+<!-- 7. tel -->
+<!-- ========================================================= -->
+
+<!--
+Protocol: tel:
+Purpose: Opens the phone dialer on supported devices.
+
+Example:
+
+<a
+href="tel:+911234567890">
+Call
+</a>
+
+Mostly useful on smartphones.
+-->
+
+<!-- ========================================================= -->
+<!-- 8. Fragment Links -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Navigate to a specific section on the same page.
+Example:
+
+<h2 id="contact">
+Contact
+</h2>
+<a href="#contact">
+Go to Contact
+</a>
+
+The id value must match exactly.
+-->
+
+<!-- ========================================================= -->
+<!-- 9. Absolute URL -->
+<!-- ========================================================= -->
+
+<!--
+Definition: A complete web address including protocol and domain.
+
+Example: https://google.com
+
+Characteristics:
+
+✔ Includes protocol (https://)
+✔ Can point to another website.
+
+Example:
+
+<a href="https://developer.mozilla.org"> MDN </a>
+-->
+
+<!-- ========================================================= -->
+<!-- 10. Relative URL -->
+<!-- ========================================================= -->
+
+<!--
+Definition: A path relative to the current webpage.
+
+Examples:
+
+about.html
+contact.html
+images/logo.png
+../index.html
+
+Characteristics:
+
+✔ No domain name required.
+✔ Used for pages within the same website.
+
+Example:
+
+<a href="about.html">
+
+About
+
+</a>
+-->
+
+<!-- ========================================================= -->
+<!-- Common Link Targets -->
+<!-- ========================================================= -->
+
+<!--
+
+target="_self"
+Current tab (Default)
+
+----------------------------
+
+target="_blank"
+New tab
+
+----------------------------
+
+target="_parent"
+Parent frame
+
+----------------------------
+
+target="_top"
+Entire browser window
+
+-->
+
+<!-- ========================================================= -->
+<!-- Absolute vs Relative URL -->
+<!-- ========================================================= -->
+
+<!--
+
+Absolute URL
+
+https://example.com/about
+
+✔ Full web address
+✔ Used for external websites
+
+----------------------------
+
+Relative URL
+
+about.html
+images/logo.png
+../contact.html
+
+✔ Used within the same website
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Always provide meaningful link text.
+✔ Avoid "Click Here".
+✔ Use target="_blank" only when necessary.
+✔ Add rel="noopener noreferrer" with target="_blank".
+✔ Use relative URLs for internal pages.
+✔ Use absolute URLs for external websites.
+✔ Ensure fragment IDs are unique.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. Which element creates hyperlinks in HTML?
+Ans: <a>
+
+Q2. Which attribute specifies the destination of a hyperlink?
+Ans: href
+
+Q3. What does target="_blank" do?
+Ans: Opens the linked page in a new tab or window.
+
+Q4. Why should rel="noopener noreferrer" be used with target="_blank"?
+Ans: It improves security and privacy by preventing the new page from accessing the original page through window.opener.
+
+Q5. What is the purpose of the download attribute?
+Ans: It instructs the browser to download the linked file instead of opening it.
+
+Q6. What does mailto: do?
+Ans: It opens the user's default email application to compose a new email.
+
+Q7. What does tel: do?
+Ans: It opens the phone dialer on supported devices.
+
+Q8. What is a fragment link?
+Ans: A link that navigates to a specific element on the same page using its id.
+
+Q9. What is the difference between an absolute URL and a relative URL?
+Ans: An absolute URL includes the full web address (protocol and domain), while a relative URL points to resources within the same website.
+
+Q10. Can an <a> element exist without an href attribute?
+Ans: Yes, but it will not function as a clickable hyperlink.
+
+-->

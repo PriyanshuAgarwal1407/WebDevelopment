@@ -1,0 +1,510 @@
+<!-- ========================================================= -->
+<!-- HTML LISTS -->
+<!-- ========================================================= -->
+
+<!--
+Lists are used to group related items together.
+
+HTML provides three types of lists:
+
+1. Unordered List (ul)
+2. Ordered List (ol)
+3. Description List (dl)
+
+Benefits:
+
+✔ Better readability
+✔ Semantic structure
+✔ Accessibility
+✔ SEO
+-->
+
+<!-- ========================================================= -->
+<!-- 1. Unordered List -->
+<!-- ========================================================= -->
+
+<!--
+Element:
+
+<ul>
+
+Purpose:
+
+Creates a bulleted list.
+
+Example:
+
+<ul>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ul>
+
+Default Bullet:
+
+• Disc
+-->
+
+<!-- ========================================================= -->
+<!-- 2. Ordered List -->
+<!-- ========================================================= -->
+
+<!--
+Element:
+
+<ol>
+
+Purpose:
+
+Creates a numbered list.
+
+Example:
+
+<ol>
+    <li>Wake Up</li>
+    <li>Study</li>
+    <li>Sleep</li>
+</ol>
+
+Default Numbering:
+
+1
+2
+3
+-->
+
+<!-- ========================================================= -->
+<!-- 3. List Item -->
+<!-- ========================================================= -->
+
+<!--
+Element:
+
+<li>
+
+Purpose:
+
+Represents an item inside
+<ul> or <ol>.
+
+Example:
+
+<li>Apple</li>
+
+Can contain:
+
+✔ Text
+✔ Images
+✔ Links
+✔ Tables
+✔ Other Lists
+-->
+
+<!-- ========================================================= -->
+<!-- 4. Description List -->
+<!-- ========================================================= -->
+
+<!--
+Element:
+
+<dl>
+
+Purpose:
+
+Defines a list of terms and descriptions.
+
+Example:
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Markup Language</dd>
+
+    <dt>CSS</dt>
+    <dd>Styles Web Pages</dd>
+</dl>
+
+Common Uses:
+
+✔ Glossary
+✔ FAQ
+✔ Dictionary
+✔ Definitions
+-->
+
+<!-- ========================================================= -->
+<!-- 5. Description Term -->
+<!-- ========================================================= -->
+
+<!--
+Element:
+
+<dt>
+
+Purpose:
+
+Represents the term or title.
+
+Example:
+
+<dt>HTML</dt>
+-->
+
+<!-- ========================================================= -->
+<!-- 6. Description Details -->
+<!-- ========================================================= -->
+
+<!--
+Element:
+
+<dd>
+
+Purpose:
+
+Represents the description of a term.
+
+Example:
+
+<dd>HyperText Markup Language</dd>
+-->
+
+<!-- ========================================================= -->
+<!-- 7. Nested Lists -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+
+A list inside another list.
+
+Example:
+
+<ul>
+
+    <li>Frontend
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+    </li>
+
+    <li>Backend</li>
+
+</ul>
+
+Purpose:
+
+✔ Categories
+✔ Menus
+✔ Navigation
+✔ Hierarchical Data
+-->
+
+<!-- ========================================================= -->
+<!-- 8. Custom Numbering -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: type
+Purpose: Changes numbering style.
+
+Values:
+
+1
+A
+a
+I
+i
+
+Examples:
+
+<ol type="A">
+<ol type="a">
+<ol type="I">
+<ol type="i">
+
+Example:
+
+<ol type="A">
+    <li>HTML</li>
+    <li>CSS</li>
+</ol>
+-->
+
+<!-- ========================================================= -->
+<!-- 9. Reversed List -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: reversed
+Purpose: Displays numbering in reverse order.
+
+Example:
+
+<ol reversed>
+
+    <li>Third</li>
+    <li>Second</li>
+    <li>First</li>
+
+</ol>
+
+Output:
+
+3
+2
+1
+-->
+
+<!-- ========================================================= -->
+<!-- 10. Start Attribute -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: start
+Purpose: Starts numbering from a specific value.
+
+Example:
+
+<ol start="5">
+
+    <li>Item</li>
+    <li>Item</li>
+
+</ol>
+
+Output:
+
+5
+6
+-->
+
+<!-- ========================================================= -->
+<!-- Common Ordered List Attributes -->
+<!-- ========================================================= -->
+
+<!--
+
+type
+
+<ol type="A">
+
+Changes numbering style.
+
+------------------------------
+
+start
+
+<ol start="10">
+
+Starts from a custom number.
+
+------------------------------
+
+reversed
+
+<ol reversed>
+
+Reverses numbering.
+
+------------------------------
+
+Example:
+
+<ol
+    type="I"
+    start="5"
+    reversed>
+
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+
+</ol>
+
+Output:
+
+V
+IV
+III
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use <ul> when order doesn't matter.
+
+✔ Use <ol> when sequence matters.
+
+✔ Use <dl> for definitions.
+
+✔ Place <li> only inside
+<ul>, <ol>, or <menu>.
+
+✔ Nest lists properly.
+
+✔ Don't use lists only for indentation.
+
+✔ Prefer CSS over deprecated styling.
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+Q1. How many types of lists are available in HTML?
+Ans:
+Three:
+<ul>, <ol>, and <dl>.
+
+Q2. What is the difference between <ul> and <ol>?
+Ans:
+<ul> creates an unordered (bulleted) list, while <ol> creates an ordered (numbered) list.
+
+Q3. Which element represents an individual list item?
+Ans:
+<li>
+
+Q4. What is the purpose of a description list?
+Ans:
+To display terms and their corresponding descriptions.
+
+Q5. Which elements are used inside a <dl>?
+Ans:
+<dt> (term) and <dd> (description).
+
+Q6. What is a nested list?
+Ans:
+A list placed inside another list.
+
+Q7. What does the type attribute do in an ordered list?
+Ans:
+It changes the numbering style (1, A, a, I, i).
+
+Q8. What does the reversed attribute do?
+Ans:
+It displays list numbering in descending order.
+
+Q9. What does the start attribute do?
+Ans:
+It begins numbering from a specified value.
+
+Q10. Can an <li> contain another list?
+Ans:
+Yes. This is called a nested list.
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+    <style>
+    html {
+        font-family: "Poppins", sans-serif;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>Unordered List</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Ordered List</h2>
+    <ol>
+        <li>Wake Up</li>
+        <li>Study</li>
+        <li>Sleep</li>
+    </ol>
+
+    <h2>Description List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+    </dl>
+
+    <h2>Nested List</h2>
+    <ul>
+        <li>Frontend
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </li>
+
+        <li>Backend
+            <ul>
+                <li>Node.js</li>
+                <li>Java</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Custom Numbering</h2>
+
+    <ol type="A">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="a">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="I">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ol>
+
+    <ol type="i">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ol>
+
+    <h2>Reversed List</h2>
+
+    <ol reversed>
+        <li>Third</li>
+        <li>Second</li>
+        <li>First</li>
+    </ol>
+
+    <h2>Start Attribute</h2>
+
+    <ol start="5">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h2>Combined Example</h2>
+
+    <ol type="I" start="5" reversed>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+</body>
+</html>

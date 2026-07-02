@@ -1,0 +1,352 @@
+<!-- ========================================================= -->
+<!-- PART 1 : HTML FUNDAMENTALS -->
+<!-- ========================================================= -->
+
+<!--
+1. What is HTML?
+HTML (HyperText Markup Language) is the standard markup language used to create and structure web pages.
+HTML describes the content of a webpage using elements such as headings, paragraphs, images, links, tables, forms, and more.
+
+HTML is NOT a programming language. It is a Markup Language.
+
+Example:
+<h1>Welcome</h1>
+<p>This is a paragraph.</p>
+-->
+
+<!-- ========================================================= -->
+
+<!--
+2. How Browsers Render HTML
+---------------------------
+When you open a webpage, the browser follows these steps:
+
+1. Downloads the HTML file.
+2. Reads the HTML from top to bottom.
+3. Parses the HTML.
+4. Builds the DOM (Document Object Model).
+5. Downloads CSS and JavaScript (if available).
+6. Creates the Render Tree.
+7. Calculates Layout.
+8. Paints pixels on the screen.
+9. Displays the webpage.
+
+Flow:
+
+HTML File
+    │
+    ▼
+HTML Parser
+    │
+    ▼
+DOM Tree
+    │
+    ▼
+CSS + JS
+    │
+    ▼
+Render Tree
+    │
+    ▼
+Layout
+    │
+    ▼
+Paint
+    │
+    ▼
+Visible Web Page
+-->
+
+<!-- ========================================================= -->
+
+<!--
+3. HTML Document Structure
+--------------------------
+
+Every HTML document has a basic structure.
+
+Example:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        Metadata
+    </head>
+
+    <body>
+        Visible Content
+    </body>
+</html>
+
+Parts:
+
+<!DOCTYPE html>  → HTML version declaration
+<html>           → Root element
+<head>           → Metadata
+<body>           → Visible webpage content
+-->
+
+<!-- ========================================================= -->
+
+<!--
+4. DOCTYPE
+----------
+
+Syntax:
+
+<!DOCTYPE html>
+
+Purpose:
+
+• Tells the browser to use HTML5.
+• Prevents Quirks Mode.
+• Ensures standards-compliant rendering.
+
+Always place it at the very top of the document.
+
+Incorrect:
+
+<html>
+<!DOCTYPE html>
+
+Correct:
+
+<!DOCTYPE html>
+<html>
+-->
+
+<!-- ========================================================= -->
+
+<!--
+5. Elements
+-----------
+
+An HTML element consists of:
+
+Opening Tag
+Content
+Closing Tag
+
+Example:
+
+<p>Hello World</p>
+
+Entire element:
+
+<p>Hello World</p>
+
+Void (Empty) Elements have no closing tag.
+
+Examples:
+
+<br>
+<hr>
+<img>
+<input>
+<meta>
+<link>
+-->
+
+<!-- ========================================================= -->
+
+<!--
+6. Tags
+--------
+
+Tags are keywords enclosed inside angle brackets.
+
+Opening Tag:
+<p>
+
+Closing Tag:
+</p>
+
+Self-closing / Void Tags:
+
+<br>
+<hr>
+<img>
+<input>
+
+Tags tell the browser how to display or structure content.
+-->
+
+<!-- ========================================================= -->
+
+<!--
+7. Attributes
+--------------
+
+Attributes provide additional information about elements.
+
+Syntax: <tag attribute="value">
+
+Example:  <a href="https://example.com">Visit</a>
+
+Common Attributes:
+
+id
+class
+style
+title
+href
+src
+alt
+width
+height
+name
+value
+placeholder
+disabled
+readonly
+
+Rules:
+
+✔ Written inside the opening tag
+✔ Usually appear as name="value"
+✔ Multiple attributes are separated by spaces
+-->
+
+<!-- ========================================================= -->
+
+<!--
+8. Nesting
+----------
+
+Nesting means placing one HTML element inside another.
+
+Correct:
+
+<div>
+    <p>Hello</p>
+</div>
+
+Incorrect:
+
+<div>
+    <p>Hello
+</div>
+</p>
+
+Always close the inner element before closing the outer element.
+-->
+
+<!-- ========================================================= -->
+
+<!--
+9. Comments
+------------
+
+Comments are ignored by browsers.
+
+Syntax: <!-- This is a comment -->
+
+Uses:
+
+• Explain code
+• Add notes
+• Temporarily disable code
+• Improve readability
+
+Comments are NOT visible on the webpage.
+-->
+
+<!-- ========================================================= -->
+
+<!--
+10. Whitespace
+--------------
+
+HTML ignores extra spaces, tabs, and new lines.
+
+Example:
+
+<p>Hello      World</p>
+
+Output:
+
+Hello World
+
+If multiple spaces are required, use:
+
+&nbsp;
+
+Example:
+
+Hello&nbsp;&nbsp;&nbsp;World
+
+For formatting, use CSS instead of adding multiple spaces.
+-->
+
+<!-- ========================================================= -->
+
+<!--
+11. Character Encoding (UTF-8)
+-------------------------------
+
+UTF-8 is the standard character encoding for HTML5.
+
+Declaration:
+
+<meta charset="UTF-8">
+
+Benefits:
+
+✔ Supports almost every language
+✔ Supports emojis 😀
+✔ Prevents character corruption
+✔ Recommended by W3C
+
+Example:
+
+<meta charset="UTF-8">
+
+Without UTF-8, special characters may display incorrectly.
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+Q1. What does HTML stand for?
+Ans:
+HyperText Markup Language.
+
+Q2. Is HTML a programming language?
+Ans:
+No. It is a markup language.
+
+Q3. What is the purpose of <!DOCTYPE html>?
+Ans:
+It tells the browser to use HTML5 standards mode.
+
+Q4. What is the root element of an HTML document?
+Ans:
+<html>
+
+Q5. Difference between a tag and an element?
+Ans:
+Tag → Opening or closing markup (<p>, </p>)
+Element → Complete structure (<p>Hello</p>)
+
+Q6. What are attributes?
+Ans:
+Additional information provided inside the opening tag.
+
+Q7. What is nesting?
+Ans:
+Placing one HTML element inside another.
+
+Q8. Do browsers display comments?
+Ans:
+No.
+
+Q9. Why is UTF-8 recommended?
+Ans:
+It supports almost all languages, symbols, and emojis.
+
+Q10. Does HTML preserve multiple spaces?
+Ans:
+No. HTML collapses consecutive whitespace into a single space.
+-->

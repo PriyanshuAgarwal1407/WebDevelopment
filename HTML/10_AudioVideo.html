@@ -1,0 +1,550 @@
+<!-- ========================================================= -->
+<!-- HTML AUDIO & VIDEO -->
+<!-- ========================================================= -->
+
+<!--
+Definition: HTML5 provides built-in elements to embed audio and video without requiring plugins such as Adobe Flash.
+
+Main Elements:
+
+<audio>
+<video>
+<source>
+<track>
+
+Benefits:
+
+✔ Native Browser Support
+✔ Accessibility
+✔ Responsive Media
+✔ Multiple Format Support
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Audio & Video</title>
+</head>
+
+<body>
+
+    <h2>HTML AUDIO TAG</h2>
+    <!-- ===================================================== -->
+    <!-- Audio (<audio>) -->
+    <!-- ===================================================== -->
+
+    <audio controls>
+        <source src="./assets/song.mp3" type="audio/mpeg">
+        <source src="./assets/song.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr><br><br><br><br><br><br>
+
+    <!-- ===================================================== -->
+    <!-- Video -->
+    <!-- ===================================================== -->
+
+    <h2>HTML VIDEO TAG</h2>
+    <video
+        controls muted loop
+        width="700"
+        height="400"
+        poster="./assets/poster.png">
+            
+        <source
+            src="./assets/sample.mp4"
+            type="video/mp4">
+
+        <source
+            src="./assets/sample.webm"
+            type="video/webm">
+
+        <track
+            src="captions/en.vtt"
+            kind="captions"
+            srclang="en"
+            label="English"
+            default>
+
+        Your browser does not support the video element.
+
+    </video>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- Autoplay + Muted + Loop -->
+    <!-- ===================================================== -->
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+        height="400"
+        poster="./assets/poster.png">
+
+        <!--? When using the autoplay attribute with the <video> element, some browsers might require the video to be muted in order for the video to start playing automatically. This is due to browser policies regarding autoplaying media with sound, which can be intrusive to users. -->
+
+        <source
+            src="./assets/sample.webm"
+            type="video/webm">
+
+    </video>
+
+    <hr><br><br><br><br><br><br>
+
+
+
+    <!-- ===================================================== -->
+    <!-- YouTube Embed -->
+    <!-- ===================================================== -->
+
+    <h2>HTML IFRAME TAG</h2>
+    <!-- keep in mind we cannot embed all the sites ex. google, yt direct  -->
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/ok5xxc9LhPg?si=NBvuoFSvI_1MCeR3" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    <iframe
+      src="https://www.wikipedia.org/"
+      frameborder="0"
+      width="100%"
+      height="500"
+    ></iframe>
+
+    <hr><br><br><br>
+
+    <!-- ===================================================== -->
+    <!-- Embed Example -->
+    <!-- ===================================================== -->
+
+    <embed
+        src="../Notes/HTML.pdf"
+        type="application/pdf"
+        width="600"
+        height="500">
+
+</body>
+
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <audio> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: The <audio> element is used to embed audio content in a webpage. It supports various audio formats and provides controls for playback.
+
+Example:
+
+<audio controls>
+    <source src="song.mp3">
+</audio>
+
+Supports:
+
+? MP3 (audio/mpeg): A widely supported format for audio. Provides good quality with reasonable file size. 
+? WAV (audio/wav): An uncompressed audio format with excellent quality, but larger file sizes. 
+? Ogg Vorbis (audio/ogg): A free and open audio format that provides good quality with smaller file sizes compared to MP3. 
+
+Without controls, users cannot play the audio.
+
+
+HTML AUDIO TAG - Attributes
+    controls: Adds playback controls (play, pause, volume, etc.). 
+    autoplay: Starts playback automatically. loop: Repeats the media indefinitely.
+    preload: Specifies if the media should be loaded when the page loads. 
+    poster: Displays an image before the media loads. 
+
+-->
+
+<!-- ========================================================= -->
+<!-- 2. <video> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: The <video> element is used to embed video content in a webpage. It supports various video formats and provides controls for playback.
+
+Example:
+
+<video controls>
+    <source src="movie.mp4" type="video/mp4">
+</video>
+
+
+HTML VIDEO TAG - Commonly supported video formats
+
+    ? MP4 (video/mp4): A widely supported format that provides good quality with efficient compression. Recommended for cross-browser compatibility. 
+
+    ? WebM (video/webm): A modern open-source format developed by Google with good compression and quality. Well supported in most modern browsers. 
+
+    ? Ogg (video/ogg): A free and open multimedia format that includes video, audio, and subtitles. It's supported but less commonly used than MP4 and WebM.
+-->
+
+<!-- ========================================================= -->
+<!-- 3. <source> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides multiple media files.
+
+Used Inside:
+
+<audio>
+<video>
+<picture>
+
+Example:
+
+<source
+src="movie.webm"
+type="video/webm">
+
+The browser chooses the first supported format.
+-->
+
+<!-- ========================================================= -->
+<!-- 4. <track> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Adds timed text tracks.
+
+Examples:
+
+✔ Captions
+✔ Subtitles
+✔ Chapters
+✔ Metadata
+
+Example:
+
+<track
+src="captions.vtt"
+kind="captions"
+srclang="en"
+label="English">
+
+Track files use the .vtt format.
+-->
+
+<!-- ========================================================= -->
+<!-- Controls -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: controls
+Purpose: Displays built-in playback controls.
+
+Includes:
+
+✔ Play
+✔ Pause
+✔ Volume
+✔ Seek Bar
+✔ Fullscreen (Video)
+
+Example:
+
+<audio controls>
+<video controls>
+
+Without controls, media cannot be controlled unless JavaScript is used.
+-->
+
+<!-- ========================================================= -->
+<!-- Captions -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Display spoken dialogue and important sounds.
+
+Example:
+
+<track
+kind="captions">
+
+Useful for:
+
+✔ Accessibility
+✔ Hearing-impaired users
+-->
+
+<!-- ========================================================= -->
+<!-- Subtitles -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Translate spoken dialogue into another language.
+
+Example:
+
+<track
+kind="subtitles"
+srclang="fr">
+
+Difference:
+
+Captions
+→ Dialogue + Sound Effects
+
+Subtitles
+→ Dialogue Translation Only
+-->
+
+<!-- ========================================================= -->
+<!-- Autoplay -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: autoplay
+Purpose: Starts playback automatically.
+
+Example:
+
+<video autoplay>
+
+Modern browsers usually require: muted for autoplay to work.
+-->
+
+<!-- ========================================================= -->
+<!-- Muted -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: muted
+Purpose: Starts media with sound turned off.
+
+Example:
+
+<video
+autoplay
+muted>
+
+Required for autoplay in most browsers.
+-->
+
+<!-- ========================================================= -->
+<!-- Poster -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: poster
+Purpose: Displays an image before the video starts.
+
+Example:
+
+<video
+poster="poster.jpg">
+
+Only applies to videos.
+-->
+
+<!-- ========================================================= -->
+<!-- Loop -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: loop
+Purpose: Repeats media continuously.
+
+Example:
+
+<audio loop>
+<video loop>
+-->
+
+<!-- ========================================================= -->
+<!-- iframe -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.
+
+Common Uses:
+
+✔ YouTube
+✔ Google Maps
+✔ PDFs
+✔ Forms
+
+Example:
+
+<iframe
+    src="https://www.youtube.com/embed/..."
+    width="700"
+    height="400"
+    allowfullscreen>
+</iframe>
+
+Important Attributes:
+
+src
+width
+height
+title
+allow
+allowfullscreen
+loading="lazy"
+-->
+
+<!-- ========================================================= -->
+<!-- embed -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Embeds external resources directly.
+
+Common Uses:
+
+✔ PDF
+✔ SVG
+✔ Multimedia
+
+Example:
+
+<embed
+    src="file.pdf"
+    type="application/pdf">
+    
+Modern HTML usually prefers:
+
+<iframe>
+<object>
+
+depending on the content.
+-->
+
+<!-- ========================================================= -->
+<!-- Common Media Attributes -->
+<!-- ========================================================= -->
+
+<!--
+
+controls
+Show playback controls.
+
+----------------------------
+
+autoplay
+Start automatically.
+
+----------------------------
+
+muted
+Mute audio.
+
+----------------------------
+
+loop
+Repeat playback.
+
+----------------------------
+
+preload
+auto
+metadata
+none
+
+----------------------------
+
+poster
+Thumbnail before video plays.
+
+----------------------------
+
+playsinline
+Play inline on mobile devices.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Supported Formats -->
+<!-- ========================================================= -->
+
+<!--
+
+Audio
+MP3
+OGG
+WAV
+
+----------------------------
+
+Video
+
+MP4 (Recommended)
+WebM
+OGV
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Always provide multiple media formats.
+✔ Include captions for accessibility.
+✔ Use controls unless building a custom player.
+✔ Use poster images for videos.
+✔ Avoid autoplay with sound.
+✔ Use loading="lazy" for iframes when appropriate.
+✔ Prefer MP4 for videos and MP3 for audio.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. Which HTML elements are used to embed audio and video?
+Ans: <audio> and <video>.
+
+Q2. What is the purpose of the <source> element?
+Ans: It provides alternative media files in different formats.
+
+Q3. Why is the <track> element used?
+Ans: To add captions, subtitles, chapters, or metadata to media.
+
+Q4. What is the difference between captions and subtitles?
+Ans: Captions include dialogue and sound effects, while subtitles only translate spoken dialogue.
+
+Q5. What does the controls attribute do?
+Ans: It displays the browser's built-in media controls.
+
+Q6. Why is muted commonly used with autoplay?
+Ans: Most browsers block autoplay with sound, so muted is required for autoplay to work.
+
+Q7. What is the purpose of the poster attribute?
+Ans: It displays a preview image before the video starts playing.
+
+Q8. What does the loop attribute do?
+Ans: It continuously repeats the media.
+
+Q9. What is the purpose of the <iframe> element?
+Ans: It embeds another webpage or external content, such as YouTube videos or Google Maps.
+
+Q10. What is the difference between <iframe> and <embed>?
+Ans: <iframe> embeds an entire webpage or external document, while <embed> is primarily used to embed external media or plugin-supported resources like PDFs.
+
+Q11. Which video format is most widely supported?
+Ans: MP4.
+
+Q12. Which audio format is most widely supported?
+Ans: MP3.
+
+-->````

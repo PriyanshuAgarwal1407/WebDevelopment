@@ -1,0 +1,413 @@
+<!-- ========================================================= -->
+<!-- HTML TABLES -->
+<!-- ========================================================= -->
+
+<!--
+Definition: The <table> HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. They are designed for tabular data only and should NOT be used for webpage layouts.
+
+Main Elements:
+
+<table>
+<tr>
+<td>
+<th>
+<thead>
+<tbody>
+<tfoot>
+<caption>
+<colgroup>
+<col>
+
+Benefits:
+
+✔ Structured Data
+✔ Accessibility
+✔ Easy Comparison
+✔ Better Readability
+-->
+
+
+<!-- ========================================================= -->
+<!-- 1. <table> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Creates a table.
+
+Example:
+
+<table>
+...
+</table>
+
+Contains all table elements.
+-->
+
+<!-- ========================================================= -->
+<!-- 2. <tr> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents one table row.
+
+Example:
+
+<tr>
+    <td>Data</td>
+</tr>
+-->
+
+<!-- ========================================================= -->
+<!-- 3. <td> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents a table data cell.
+
+Example:
+
+<td>HTML</td>
+
+Contains regular data.
+-->
+
+<!-- ========================================================= -->
+<!-- 4. <th> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents a table header cell.
+
+Default:
+
+Bold
+Centered
+
+Example:
+
+<th>Name</th>
+
+Use scope for accessibility:
+
+<th scope="col">
+<th scope="row">
+-->
+
+<!-- ========================================================= -->
+<!-- 5. <thead> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Groups table header rows.
+
+Example:
+
+<thead>
+    <tr>
+        <th>...</th>
+    </tr>
+</thead>
+
+Improves accessibility.
+-->
+
+<!-- ========================================================= -->
+<!-- 6. <tbody> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Groups the main table content.
+
+Example:
+
+<tbody>
+    <tr>
+    ...
+    </tr>
+</tbody>
+
+A table can have multiple <tbody> sections.
+-->
+
+<!-- ========================================================= -->
+<!-- 7. <tfoot> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Groups footer rows.
+
+Example:
+
+<tfoot>
+    <tr>
+        <td>Total</td>
+    </tr>
+</tfoot>
+
+Usually contains totals or summaries.
+-->
+
+<!-- ========================================================= -->
+<!-- 8. <caption> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides a title for the table.
+
+Example:
+
+<caption>
+    Employee List
+</caption>
+
+Should be the first child of <table>.
+-->
+
+<!-- ========================================================= -->
+<!-- 9. <colgroup> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Groups one or more columns for styling.
+
+Example:
+
+<colgroup>
+    <col>
+    <col>
+</colgroup>
+
+Used together with <col>.
+-->
+
+<!-- ========================================================= -->
+<!-- 10. <col> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Defines properties for individual columns.
+
+Example:
+
+<col
+style="background:#eee">
+
+Common Uses:
+
+✔ Column Width
+✔ Background Color
+✔ Visibility
+-->
+
+<!-- ========================================================= -->
+<!-- rowspan -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: rowspan
+
+Purpose: Allows one cell to span multiple rows.
+
+Example:
+
+<td rowspan="2">
+    HTML
+</td>
+
+The cell occupies two rows.
+-->
+
+<!-- ========================================================= -->
+<!-- colspan -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: colspan
+Purpose: Allows one cell to span multiple columns.
+
+Example:
+
+<td colspan="3">
+
+Total
+
+</td>
+
+The cell occupies three columns.
+-->
+
+<!-- ========================================================= -->
+<!-- Accessibility -->
+<!-- ========================================================= -->
+
+<!--
+
+Use: <caption> For table title.
+
+----------------------------
+
+<th>
+Instead of <td> for headers.
+
+----------------------------
+
+scope="col"
+Column header.
+
+----------------------------
+
+scope="row"
+Row header.
+
+----------------------------
+
+Example:
+
+<th scope="col">
+Name
+</th>
+
+Benefits:
+
+✔ Screen Readers
+✔ Better Navigation
+✔ Improved Accessibility
+-->
+
+<!-- ========================================================= -->
+<!-- Responsive Tables -->
+<!-- ========================================================= -->
+
+<!--
+
+Large tables may overflow on small screens.
+
+Recommended CSS:
+
+.table-container{
+    overflow-x:auto;
+}
+
+HTML:
+
+<div class="table-container">
+    <table>
+    ...
+    </table>
+</div>
+
+Benefits:
+
+✔ Horizontal Scrolling
+✔ Mobile Friendly
+✔ Better User Experience
+
+-->
+
+<!-- ========================================================= -->
+<!-- Table Structure -->
+<!-- ========================================================= -->
+
+<!--
+
+<table>
+    <caption>
+    </caption>
+    <colgroup>
+        <col>
+    </colgroup>
+    <thead>
+        <tr>
+            <th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>
+        </tr>
+    </tfoot>
+</table>
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use tables only for tabular data.
+✔ Never use tables for page layout.
+✔ Always include a <caption>.
+✔ Use <thead>, <tbody>, and <tfoot>.
+✔ Use <th> for headers.
+✔ Add scope attributes.
+✔ Wrap large tables in a scrollable container.
+✔ Keep table structure simple.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. Which HTML element creates a table?
+Ans: <table>
+
+Q2. What is the purpose of the <tr> element?
+Ans: It defines a table row.
+
+Q3. What is the difference between <td> and <th>?
+Ans: <td> contains regular data, while <th> represents a header cell with semantic meaning.
+
+Q4. What is the purpose of the <thead> element?
+Ans: It groups the header rows of a table.
+
+Q5. Can a table have multiple <tbody> elements?
+Ans: Yes. HTML allows multiple <tbody> sections.
+
+Q6. What is the purpose of the <tfoot> element?
+Ans: It groups footer rows, often used for totals or summaries.
+
+Q7. What does the rowspan attribute do?
+Ans: It allows a cell to span multiple rows.
+
+Q8. What does the colspan attribute do?
+Ans: It allows a cell to span multiple columns.
+
+Q9. Why should the scope attribute be used on <th> elements?
+Ans: It improves accessibility by helping screen readers associate header cells with related data.
+
+Q10. How can large tables be made responsive?
+Ans: Wrap the table inside a container with overflow-x: auto to enable horizontal scrolling on small screens.
+
+Q11. What is the purpose of the <caption> element?
+Ans: It provides a descriptive title for the table.
+
+Q12. Should tables be used for webpage layouts?
+Ans: No. Tables should only be used for displaying tabular data.
+
+-->
+
+
+<!-- *------------------------------------- -->
+<!--*  LIST OF DEPRECATED TAGS - HTML TABLES 
+
+  <table align="...">: Used to horizontally align the table within its containing element.
+  <tr align="...">: Used to horizontally align the content of a table row.
+  <td align="...">: Used to horizontally align the content of a table cell.
+  <th align="...">: Used to horizontally align the content of a table header cell.
+  <bgcolor="...">: Used to set the background color of a table, row, or cell.
+  <border="...">: Used to define the border width of a table.
+  <frame="...">: Used to specify whether a table should have outer frames.
+  <rules="...">: Used to define the presence and types of horizontal and vertical rules within a table.
+  <width="...">: Used to set the width of a table, row, or cell. 
+  cellspacing & cellpadding for the cell padding and outer spacing
+-->

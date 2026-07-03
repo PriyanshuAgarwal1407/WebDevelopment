@@ -1,0 +1,502 @@
+<!-- ========================================================= -->
+<!-- SEMANTIC HTML -->
+<!-- ========================================================= -->
+
+<!--
+Semantic HTML uses meaningful elements that clearly describe the purpose of the content they contain.
+
+Instead of generic elements like:
+
+<div>
+<span>
+
+Semantic HTML uses descriptive elements like:
+
+<header>
+<nav>
+<main>
+<footer>
+
+Benefits:
+
+✔ Better Accessibility
+✔ Better SEO
+✔ Easier Maintenance
+✔ Improved Readability
+✔ Better Screen Reader Support
+-->
+
+<!--? Semantic HTML5 elements are an important part of modern web development as they provide a clearer structure to web documents and improve accessibility, search engine optimization, and styling.  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML</title>
+</head>
+
+<body>
+    <!-- Header content goes here -->
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <!-- Navigation menu goes here -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main content of the page goes here -->
+    <main>
+        <!-- Section content goes here -->
+        <section>
+            <h2>Featured Course</h2>
+
+            <!-- Article content goes here -->
+            <article>
+                <h3>Complete HTML Course</h3>
+                <p>Learn HTML from beginner to advanced.</p>
+            </article>
+        </section>
+
+        <!-- Sidebar content goes here -->
+        <aside>
+            Related Articles
+        </aside>
+
+        <figure>
+            <img src="html.png" alt="HTML Logo">
+            <figcaption>HTML5 Logo</figcaption>
+        </figure>
+
+        <details>
+            <summary>Read More</summary>
+            <p>
+                Semantic HTML improves SEO and accessibility.
+            </p>
+        </details>
+
+        <dialog open>
+            Welcome to HTML5!
+        </dialog>
+
+        <search>
+            <form>
+                <input type="search" placeholder="Search">
+                <button>Search</button>
+            </form>
+        </search>
+
+    </main>
+
+    <!-- Footer content goes here -->
+    <footer>
+        © 2026 All Rights Reserved
+    </footer>
+
+</body>
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <header> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents introductory content.
+
+Common Contents:
+
+✔ Logo
+✔ Website Title
+✔ Navigation
+✔ Search
+
+Example:
+
+<header>
+    <h1>My Website</h1>
+</header>
+
+Notes:
+
+A page or section can have its own <header>.
+-->
+
+<!-- ========================================================= -->
+<!-- 2. <nav> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents navigation links.
+
+Example:
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+
+</nav>
+
+Best Practice: Use only for major navigation links.
+-->
+
+<!-- ========================================================= -->
+<!-- 3. <main> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents the primary content of the webpage.
+
+Rules: ✔ Only one <main> per page.
+
+✔ Excludes:
+Header
+Footer
+Navigation
+Sidebars
+
+Example:
+
+<main>
+...
+</main>
+-->
+
+<!-- ========================================================= -->
+<!-- 4. <article> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents self-contained content.
+
+Examples:
+
+✔ Blog Post
+✔ News Article
+✔ Forum Post
+✔ Product Card
+
+Example:
+
+<article>
+    <h2>HTML Basics</h2>
+    <p>...</p>
+</article>
+
+Should make sense if read independently.
+-->
+
+<!-- ========================================================= -->
+<!-- 5. <section> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Groups related content together. Usually contains a heading.
+
+Example:
+
+<section>
+    <h2>Services</h2>
+    ...
+</section>
+
+Use when content belongs to one topic.
+-->
+
+<!-- ========================================================= -->
+<!-- 6. <aside> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents related or secondary content.
+
+Examples:
+
+✔ Sidebar
+✔ Advertisements
+✔ Author Bio
+✔ Related Links
+
+Example:
+
+<aside>
+    <h3>Related Articles</h3>
+</aside>
+-->
+
+<!-- ========================================================= -->
+<!-- 7. <footer> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents footer information.
+
+Common Contents:
+
+✔ Copyright
+✔ Contact
+✔ Social Links
+✔ Sitemap
+
+Example:
+
+<footer>
+    © 2026 My Website
+</footer>
+
+A page or section can have its own footer.
+-->
+
+<!-- ========================================================= -->
+<!-- 8. <details> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Creates a collapsible content section.
+
+Example:
+
+<details>
+    <summary>Show More</summary>
+        <p>Content</p>
+</details>
+
+User can expand or collapse it.
+-->
+
+<!-- ========================================================= -->
+<!-- 9. <summary> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides the visible heading for a <details> element.
+
+Example:
+
+<summary>
+    Click Here
+</summary>
+
+Only used inside <details>.
+-->
+
+<!-- ========================================================= -->
+<!-- 10. <dialog> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents a dialog box or modal.
+
+Example:
+
+<dialog open>
+    Welcome
+</dialog>
+
+JavaScript methods:
+
+show()
+showModal()
+close()
+
+Supported in modern browsers.
+-->
+
+<!-- ========================================================= -->
+<!-- 11. <search> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents a search section.
+
+Example:
+
+<search>
+    <form>
+      <input type="search">
+    </form>
+</search>
+
+Introduced as a semantic HTML element.
+
+Previously developers used:
+
+<div class="search">
+or
+<form role="search">
+
+Now:
+<search>
+
+Browser support is still growing.
+-->
+
+<!-- ========================================================= -->
+<!-- 12. <figure> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Represents self-contained media.
+
+Examples:
+
+✔ Images
+✔ Charts
+✔ Diagrams
+✔ Code Snippets
+
+Example:
+
+<figure>
+    <img src="">
+</figure>
+
+Usually paired with <figcaption>.
+-->
+
+<!-- ========================================================= -->
+<!-- 13. <figcaption> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides a caption for a figure.
+
+Example:
+
+<figure>
+    <img src="logo.png">
+        <figcaption>
+            HTML Logo
+        </figcaption>
+</figure>
+
+Can appear before or after the media.
+-->
+
+<!-- ========================================================= -->
+<!-- Semantic Layout -->
+<!-- ========================================================= -->
+
+<!--
+
+<html>
+    <body>
+        <header>
+        </header>
+        <nav>
+        </nav>
+        <main>
+            <section>
+                <article>
+                </article>
+            </section>
+            <aside>
+            </aside>
+            <figure>
+                <figcaption>
+                </figcaption>
+            </figure>
+            <details>
+                <summary>
+                </summary>
+            </details>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
+
+-->
+
+<!-- ========================================================= -->
+<!-- Semantic vs Non-Semantic -->
+<!-- ========================================================= -->
+
+<!--
+
+Non-Semantic
+
+<div>
+<span>
+
+----------------------------
+
+Semantic
+
+<header>
+<nav>
+<main>
+<section>
+<article>
+<aside>
+<footer>
+<figure>
+<figcaption>
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use semantic elements whenever possible.
+✔ Use only one <main>.
+✔ Give every <section> a heading.
+✔ Use <article> for independent content.
+✔ Use <figure> with <figcaption>.
+✔ Use <nav> only for major navigation.
+✔ Prefer semantic elements over generic <div>.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. What is Semantic HTML?
+Ans: Using meaningful HTML elements that describe the purpose of their content.
+
+Q2. Why is Semantic HTML important?
+Ans: It improves accessibility, SEO, readability, and maintainability.
+
+Q3. What is the difference between <section> and <article>?
+Ans: <section> groups related content, while <article> represents independent, self-contained content.
+
+Q4. How many <main> elements should a page have?
+Ans: Only one.
+
+Q5. What is the purpose of the <nav> element?
+Ans: To contain major navigation links.
+
+Q6. What is the purpose of the <aside> element?
+Ans: To display related or secondary content, such as sidebars or advertisements.
+
+Q7. What is the difference between <figure> and <figcaption>?
+Ans: <figure> contains self-contained media, while <figcaption> provides its caption.
+
+Q8. What is the purpose of <details> and <summary>?
+Ans: They create expandable and collapsible content sections.
+
+Q9. What is the <dialog> element used for?
+Ans: To create dialog boxes or modal windows.
+
+Q10. What is the purpose of the <search> element?
+Ans: It semantically identifies a search section or search interface.
+
+Q11. Can a page have multiple <header> and <footer> elements?
+Ans: Yes. Individual sections and articles can also have their own <header> and <footer>.
+
+Q12. Which elements are considered non-semantic?
+Ans: <div> and <span>.
+
+-->

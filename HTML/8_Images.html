@@ -1,0 +1,491 @@
+<!-- ========================================================= -->
+<!-- HTML IMAGES -->
+<!-- ========================================================= -->
+
+<!--
+Definition: The <img> element is used to embed images into a webpage.
+
+Unlike background images in CSS, HTML images become part of the document content and can improve accessibility and SEO.
+
+Benefits:
+
+✔ Visual Content
+✔ SEO
+✔ Accessibility
+✔ Responsive Design
+✔ Faster User Experience
+-->
+
+
+
+    
+    
+
+    <!-- Picture Element -->
+    <picture>
+
+        <source
+            srcset="images/photo.avif"
+            type="image/avif">
+
+        <source
+            srcset="images/photo.webp"
+            type="image/webp">
+
+        <img
+            src="images/photo.jpg"
+            alt="Nature">
+
+    </picture>
+
+    <hr>
+
+    <!-- Figure -->
+    <figure>
+
+        <img
+            src="images/html-logo.png"
+            alt="HTML Logo">
+
+        <figcaption>
+            HTML5 Official Logo
+        </figcaption>
+
+    </figure>
+
+</body>
+
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <img> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Embeds an image into a webpage.
+
+Syntax:
+
+<img
+    src="image.jpg"
+    alt="Description">
+
+Characteristics:
+
+✔ Void Element
+✔ No Closing Tag
+✔ Inline-Replaced Element
+-->
+
+<!-- ========================================================= -->
+<!-- 2. src -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: src
+Purpose: Specifies the image file location.
+Example: <img src="logo.png">
+
+Supports:
+
+✔ Relative URLs
+✔ Absolute URLs
+✔ Base64 Images
+-->
+
+<!-- ========================================================= -->
+<!-- 3. alt -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: alt
+Purpose: Provides alternative text if the image cannot be displayed.
+
+Benefits:
+
+✔ Accessibility
+✔ SEO
+✔ Screen Readers
+
+Example:
+
+<img
+src="cat.jpg"
+alt="White Cat Sleeping">
+
+Best Practice: Always provide meaningful alt text.
+-->
+
+<!-- ========================================================= -->
+<!-- 4. width -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: width
+Purpose: Specifies image width.
+
+Example:
+
+<img
+src="photo.jpg"
+width="400">
+
+Measured in CSS pixels.
+Helps reduce layout shifts.
+-->
+
+<!-- ========================================================= -->
+<!-- 5. height -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: height
+Purpose: Specifies image height.
+
+Example:
+
+<img
+src="photo.jpg"
+height="300">
+
+Best Practice: Always specify width and height together to avoid layout shifts.
+-->
+
+<!-- ========================================================= -->
+<!-- 6. loading -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: loading
+Purpose: Controls image loading behavior.
+
+Values:
+eager
+lazy
+
+Example:
+
+<img
+src="image.jpg"
+loading="lazy">
+
+Benefits:
+
+✔ Faster page loading
+✔ Reduced bandwidth
+✔ Better performance
+-->
+
+<!-- ========================================================= -->
+<!-- 7. decoding -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: decoding
+Purpose: Hints how the browser should decode images.
+
+Values:
+
+sync
+async
+auto
+
+Example:
+
+<img
+src="photo.jpg"
+decoding="async">
+
+Recommended: async
+-->
+
+<!-- ========================================================= -->
+<!-- 8. srcset -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: srcset
+Purpose: Provides multiple image versions.
+
+Example:
+
+<img
+src="small.jpg"
+srcset="
+small.jpg 480w,
+medium.jpg 768w,
+large.jpg 1200w">
+
+Browser automatically selects the best image.
+-->
+
+<!-- ========================================================= -->
+<!-- 9. sizes -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: sizes
+Purpose: Works with srcset to tell the browser how much space the image occupies.
+
+Example:
+sizes="(max-width:600px)100vw,50vw"
+
+Used for responsive images.
+-->
+
+<!-- ========================================================= -->
+<!-- 10. <picture> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides multiple sources of an image, allowing the browser to choose the most appropriate source based on the user's device, screen size, and other factors. This is particularly useful for responsive  design and ensuring the best quality images are displayed. 
+
+
+Example:
+
+<picture>
+    <source
+        media="(max-width:600px)"
+        srcset="mobile.jpg">
+
+    <source
+        media="(max-width:1000px)"
+        srcset="tablet.jpg">
+
+    <img
+        src="desktop.jpg"
+        alt="Mountain">
+</picture>
+
+Benefits:
+
+✔ Responsive Images
+✔ Modern Formats
+✔ Art Direction
+-->
+
+<!-- ========================================================= -->
+<!-- 11. <source> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Defines an alternative image source. Used inside: <picture>
+
+Common Attributes:
+
+srcset
+type
+media
+
+Example:
+
+<source
+srcset="image.avif"
+type="image/avif">
+-->
+
+<!-- ========================================================= -->
+<!-- 12. <figure> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: The <figure> element is a semantic container for self-contained content that is referenced from the main document. It usually contains an image, diagram, chart, code snippet, table, or video, along with an optional caption.
+
+Example:
+
+<figure>
+    <img src="mountain.jpg" alt="Snow-covered mountain">
+    <figcaption>Snow-covered mountain during sunrise.</figcaption>
+</figure>
+
+Common Uses:
+
+✔ Images
+✔ Charts
+✔ Diagrams
+✔ Code Examples
+
+Use the alt attribute for images within the figure element to provide alternative text for accessibility. 
+
+The figure element helps improve accessibility and search engine optimization by indicating the content and its context. 
+-->
+
+<!-- ========================================================= -->
+<!-- 13. <figcaption> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides a caption for a figure.
+
+Example:
+
+<figcaption>
+    HTML Logo
+</figcaption>
+
+Can appear before or after the image.
+-->
+
+<!-- ========================================================= -->
+<!-- Responsive Images -->
+<!-- ========================================================= -->
+
+<!--
+
+Responsive images automatically adapt to:
+
+✔ Screen Size
+✔ Resolution
+✔ Device Pixel Ratio
+
+Techniques:
+
+✔ srcset
+✔ sizes
+✔ picture
+✔ CSS max-width:100%
+
+-->
+
+<!-- ========================================================= -->
+<!-- Lazy Loading -->
+<!-- ========================================================= -->
+
+<!--
+
+loading="lazy"
+
+Loads images only when they approach the viewport.
+
+Benefits:
+
+✔ Faster Initial Page Load
+✔ Lower Bandwidth Usage
+✔ Better Core Web Vitals
+
+Recommended for:
+
+✔ Gallery Images
+✔ Blog Images
+✔ Product Images
+
+Avoid for:
+
+✔ Hero Images
+✔ Above-the-Fold Images
+
+-->
+
+<!-- ========================================================= -->
+<!-- Modern Image Formats -->
+<!-- ========================================================= -->
+
+<!--
+
+JPEG (.jpg)
+
+✔ Photos
+✔ Small Size
+
+----------------------------
+
+PNG (.png)
+
+✔ Transparency
+✔ Logos
+
+----------------------------
+
+SVG (.svg)
+
+✔ Icons
+✔ Vector Graphics
+✔ Infinitely Scalable
+
+----------------------------
+
+WebP (.webp)
+
+✔ Smaller than JPEG/PNG
+✔ Supports Transparency
+✔ Modern Browsers
+
+----------------------------
+
+AVIF (.avif)
+
+✔ Best Compression
+✔ Excellent Quality
+✔ Modern Browsers
+
+Recommended Order:
+
+AVIF
+ ↓
+WebP
+ ↓
+JPEG/PNG (Fallback)
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Always include alt text.
+✔ Specify width and height.
+✔ Use loading="lazy" for below-the-fold images.
+✔ Prefer AVIF or WebP over JPEG/PNG.
+✔ Use srcset for responsive images.
+✔ Use picture for modern format fallbacks.
+✔ Optimize image file sizes before uploading.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. Which HTML element is used to display an image?
+Ans: <img>
+
+Q2. Is the <img> element a void element?
+Ans: Yes. It has no closing tag.
+
+Q3. What is the purpose of the src attribute?
+Ans: It specifies the image source.
+
+Q4. Why is the alt attribute important?
+Ans: It improves accessibility, SEO, and provides fallback text if the image cannot load.
+
+Q5. What is the benefit of specifying width and height?
+Ans: It reserves space for the image and reduces layout shifts (CLS).
+
+Q6. What does loading="lazy" do?
+Ans: It delays loading images until they are near the viewport.
+
+Q7. What is the purpose of decoding="async"?
+Ans: It allows the browser to decode images asynchronously for better performance.
+
+Q8. What is the difference between src and srcset?
+Ans: src specifies one image, while srcset provides multiple image versions for different devices.
+
+Q9. Why is the sizes attribute used?
+Ans: It tells the browser how much space the image will occupy, helping it choose the best image from srcset.
+
+Q10. What is the purpose of the <picture> element?
+Ans: It allows multiple image sources for responsive images and modern formats.
+
+Q11. Which image formats are recommended for modern websites?
+Ans: AVIF and WebP, with JPEG/PNG as fallbacks.
+
+Q12. What is the purpose of <figure> and <figcaption>?
+Ans: <figure> groups self-contained media, and <figcaption> provides a caption for it.
+
+Q13. How would you make an image responsive using the width attribute?
+Ans: You can set the width attribute to a percentage value (e.g., width="100%") to make the image adjust its width based on the available space.
+-->

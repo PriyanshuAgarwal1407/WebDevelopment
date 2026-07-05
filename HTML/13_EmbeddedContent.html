@@ -1,0 +1,428 @@
+<!-- ========================================================= -->
+<!-- HTML EMBEDDED CONTENT -->
+<!-- ========================================================= -->
+
+<!--
+Definition:
+
+Embedded content allows external resources or documents to be
+displayed inside a webpage.
+
+Examples:
+
+✔ YouTube Videos
+✔ Google Maps
+✔ PDF Files
+✔ SVG Images
+✔ HTML Documents
+✔ Multimedia
+✔ Third-party Widgets
+
+Main Elements:
+
+<iframe>
+<embed>
+<object>
+<param>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Embedded Content</title>
+</head>
+
+<body>
+
+    <h1>HTML Embedded Content</h1>
+
+    <!-- ===================================================== -->
+    <!-- iframe -->
+    <!-- ===================================================== -->
+
+    <h2>Iframe</h2>
+
+    <iframe
+        src="https://example.com"
+        width="700"
+        height="400"
+        title="Example Website"
+        loading="lazy"
+        allowfullscreen>
+    </iframe>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- embed -->
+    <!-- ===================================================== -->
+
+    <h2>Embed PDF</h2>
+
+    <embed
+        src="../Notes/HTML.pdf"
+        type="application/pdf"
+        width="700"
+        height="500">
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- object -->
+    <!-- ===================================================== -->
+
+    <h2>Object</h2>
+
+    <object
+        data="sample.pdf"
+        type="application/pdf"
+        width="700"
+        height="500">
+
+        PDF is not supported.
+
+    </object>
+
+    <hr>
+
+    <!-- ===================================================== -->
+    <!-- object + param -->
+    <!-- ===================================================== -->
+
+    <object
+        data="movie.swf"
+        width="400"
+        height="300">
+
+        <param
+            name="autoplay"
+            value="true">
+
+        Plugin not supported.
+
+    </object>
+
+</body>
+
+</html>
+
+<!-- ========================================================= -->
+<!-- 1. <iframe> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Embeds another webpage inside the current webpage.
+
+Common Uses:
+
+✔ YouTube Videos
+✔ Google Maps
+✔ Forms
+✔ Dashboards
+✔ Documentation
+
+Example:
+
+<iframe
+    src="page.html">
+</iframe>
+
+Common Attributes:
+
+src
+width
+height
+title
+loading
+sandbox
+allow
+allowfullscreen
+-->
+
+<!-- ========================================================= -->
+<!-- 2. <embed> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Embeds external resources directly.
+
+Common Uses:
+
+✔ PDF
+✔ SVG
+✔ Multimedia
+
+Example:
+
+<embed
+src="sample.pdf"
+type="application/pdf">
+
+Modern HTML generally prefers
+<iframe> or <object>.
+-->
+
+<!-- ========================================================= -->
+<!-- 3. <object> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Embeds external resources with fallback content.
+
+Can display:
+
+✔ PDF
+✔ Images
+✔ SVG
+✔ HTML
+✔ Multimedia
+
+Example:
+
+<object
+data="file.pdf"
+type="application/pdf">
+
+Fallback Content
+
+</object>
+
+More flexible than <embed>.
+-->
+
+<!-- ========================================================= -->
+<!-- 4. <param> -->
+<!-- ========================================================= -->
+
+<!--
+Purpose: Provides parameters to an <object> element.
+
+Example:
+
+<param
+name="autoplay"
+value="true">
+
+Mostly used with older multimedia content.
+
+Modern websites rarely use it.
+-->
+
+<!-- ========================================================= -->
+<!-- Sandbox -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: sandbox
+Purpose: Restricts what an iframe is allowed to do.
+
+Example:
+
+<iframe
+src="page.html"
+sandbox>
+
+</iframe>
+
+Common Values:
+
+allow-scripts
+allow-forms
+allow-popups
+allow-downloads
+allow-same-origin
+
+Example:
+
+<iframe
+sandbox="
+allow-scripts
+allow-forms">
+
+Sandbox greatly improves security.
+-->
+
+<!-- ========================================================= -->
+<!-- Permissions -->
+<!-- ========================================================= -->
+
+<!--
+Attribute: allow
+Purpose: Grants specific browser permissions to an iframe.
+
+Example:
+
+<iframe
+
+allow="
+fullscreen;
+camera;
+microphone">
+
+</iframe>
+
+Common Permissions:
+
+fullscreen
+camera
+microphone
+geolocation
+clipboard-write
+payment
+-->
+
+<!-- ========================================================= -->
+<!-- Security -->
+<!-- ========================================================= -->
+
+<!--
+
+Best Practices:
+
+✔ Use HTTPS resources.
+✔ Always add a meaningful title to iframes.
+✔ Use loading="lazy".
+✔ Apply sandbox whenever possible.
+✔ Grant only required permissions.
+✔ Avoid embedding untrusted websites.
+✔ Validate third-party content.
+✔ Prefer Content Security Policy (CSP).
+
+-->
+
+<!-- ========================================================= -->
+<!-- Common iframe Attributes -->
+<!-- ========================================================= -->
+
+<!--
+
+src
+Embedded URL
+
+----------------------------
+
+title
+Accessibility
+
+----------------------------
+
+width
+Frame Width
+
+----------------------------
+
+height
+Frame Height
+
+----------------------------
+
+loading="lazy"
+Lazy Loading
+
+----------------------------
+
+sandbox
+Restrict Capabilities
+
+----------------------------
+
+allow
+Permission Policy
+
+----------------------------
+
+allowfullscreen
+Fullscreen Support
+
+-->
+
+<!-- ========================================================= -->
+<!-- iframe vs embed vs object -->
+<!-- ========================================================= -->
+
+<!--
+
+iframe
+
+✔ Web Pages
+✔ Maps
+✔ YouTube
+✔ Forms
+
+----------------------------
+
+embed
+
+✔ PDF
+✔ Media
+✔ Simple Embeds
+
+----------------------------
+
+object
+
+✔ PDF
+✔ Images
+✔ SVG
+✔ Fallback Content
+✔ More Flexible
+
+-->
+
+<!-- ========================================================= -->
+<!-- Best Practices -->
+<!-- ========================================================= -->
+
+<!--
+
+✔ Use <iframe> for web pages and third-party content.
+✔ Use <object> when fallback content is needed.
+✔ Use <embed> for simple media embedding.
+✔ Always include title for accessibility.
+✔ Use sandbox for untrusted content.
+✔ Use lazy loading for performance.
+✔ Minimize iframe permissions.
+
+-->
+
+<!-- ========================================================= -->
+<!-- Interview Questions -->
+<!-- ========================================================= -->
+
+<!--
+
+Q1. Which element is commonly used to embed another webpage?
+Ans: <iframe>
+
+Q2. What is the purpose of the sandbox attribute?
+Ans: It restricts the capabilities of content inside an iframe, improving security.
+
+Q3. What does the allow attribute do on an iframe?
+Ans: It grants specific browser permissions such as fullscreen, camera, or microphone access.
+
+Q4. What is the purpose of the title attribute on an iframe?
+Ans: It improves accessibility by describing the embedded content to screen readers.
+
+Q5. What is the difference between <embed> and <object>?
+Ans: <embed> is a simple way to embed external resources, while <object> supports fallback content and offers greater flexibility.
+
+Q6. What is the purpose of the <param> element?
+Ans: It passes parameters to an <object> element, mainly for legacy multimedia content.
+
+Q7. Why should loading="lazy" be used on iframes?
+Ans: It delays loading off-screen content, improving page performance.
+
+Q8. Which element is preferred for embedding YouTube videos?
+Ans: <iframe>
+
+Q9. Should untrusted websites be embedded without restrictions?
+Ans: No. Use the sandbox attribute and grant only the minimum required permissions.
+
+Q10. Which embedded content element supports fallback content?
+Ans: <object>
+
+-->

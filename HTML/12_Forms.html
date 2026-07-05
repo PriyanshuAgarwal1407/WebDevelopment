@@ -1,0 +1,468 @@
+<!-- ========================================================= -->
+<!-- HTML5 FORMS (2026 Edition) -->
+<!-- ========================================================= -->
+
+<!--
+1. Introduction
+2. <form>
+3. <label>
+4. <input>
+5. Input Types
+6. Other Form Elements
+7. Validation Attributes
+8. Common Form Attributes
+9. Form Submission Methods
+10. Accessibility
+11. Best Practices
+-->
+
+<!-- ========================================================= -->
+<!-- INTRODUCTION -->
+<!-- ========================================================= -->
+
+<!--
+HTML Forms collect user input and send it to a server.
+
+Main Elements:
+
+<form>
+<input>
+<label>
+<textarea>
+<select>
+<option>
+<optgroup>
+<datalist>
+<button>
+<fieldset>
+<legend>
+<output>
+<progress>
+<meter>
+-->
+
+<!-- ========================================================= -->
+<!-- <form> -->
+<!-- ========================================================= -->
+
+<!--
+Creates an HTML form.
+
+Syntax:
+
+<form action="/submit" method="post">
+    ...
+</form>
+
+Common Attributes:
+
+action
+method
+autocomplete
+target
+enctype
+name
+accept-charset
+novalidate
+-->
+
+<!-- ========================================================= -->
+<!-- <label> -->
+<!-- ========================================================= -->
+
+<!--
+Associates text with a form control.
+
+Use:
+
+<label for="email">Email</label>
+<input id="email">
+
+Benefits:
+
+✔ Accessibility
+✔ Larger click area
+✔ Screen reader support
+-->
+
+<!-- ========================================================= -->
+<!-- <input> -->
+<!-- ========================================================= -->
+
+<!--
+Creates interactive form controls.
+
+Common Attributes:
+
+type
+id
+name
+value
+placeholder
+required
+readonly
+disabled
+autocomplete
+autofocus
+maxlength
+minlength
+min
+max
+step
+pattern
+multiple
+accept
+checked
+list
+size
+-->
+
+<!-- ========================================================= -->
+<!-- INPUT TYPES -->
+<!-- ========================================================= -->
+
+<!--
+text              Single-line text
+password          Hidden password
+email             Email validation
+number            Numeric input
+tel               Telephone number (no automatic validation)
+url               Website URL
+search            Search field
+checkbox          Multiple selection
+radio             Single selection
+file              File upload
+hidden            Hidden value
+color             Color picker
+range             Slider
+date              Date picker
+time              Time picker
+datetime-local    Date & Time picker
+month             Month picker
+week              Week picker
+submit            Submit form
+reset             Reset form
+button            Generic button
+image             Image submit button
+-->
+
+<!-- ========================================================= -->
+<!-- OTHER FORM ELEMENTS -->
+<!-- ========================================================= -->
+
+<!--
+<textarea>
+
+Multi-line input.
+
+Attributes:
+
+rows
+cols
+maxlength
+minlength
+placeholder
+readonly
+required
+wrap
+-->
+
+<!--
+<select>
+
+Dropdown list.
+
+Attributes:
+
+name
+multiple
+size
+required
+disabled
+-->
+
+<!--
+<option>
+
+Single selectable item.
+
+Attributes:
+
+value
+selected
+disabled
+-->
+
+<!--
+<optgroup>
+
+Groups related options.
+
+Attribute:
+
+label
+-->
+
+<!--
+<datalist>
+
+Autocomplete suggestions.
+
+Works with:
+
+<input list="">
+-->
+
+<!--
+<fieldset>
+
+Groups related controls.
+-->
+
+<!--
+<legend>
+
+Title of a fieldset.
+-->
+
+<!--
+<button>
+
+Creates a button.
+
+Types:
+
+submit
+reset
+button
+-->
+
+<!--
+<output>
+
+Displays calculated output.
+-->
+
+<!--
+<progress>
+
+Shows task progress.
+
+Attributes:
+
+value
+max
+-->
+
+<!--
+<meter>
+
+Represents a measurement within a known range.
+
+Examples:
+
+Battery Level
+Disk Usage
+Exam Score
+Signal Strength
+
+Attributes:
+
+value
+min
+max
+low
+high
+optimum
+-->
+
+<!-- ========================================================= -->
+<!-- VALIDATION ATTRIBUTES -->
+<!-- ========================================================= -->
+
+<!--
+required: Field must not be empty.
+pattern: Regular expression validation. 
+    Example: pattern="[A-Za-z]{3,}"
+maxlength: Maximum characters.
+minlength: Minimum characters.
+readonly: Cannot edit. Submitted with form.
+disabled: Cannot edit. ✘ Not submitted.
+placeholder: Displays hint text. Not a replacement for labels.
+autofocus: Automatically focuses the field when the page loads. Use only once per page.
+autocomplete: Browser autofill. Values: on, off
+    Examples: email, name, username, current-password, new-password
+multiple: Allows multiple values. Works with: email, file
+novalidate: Disables browser validation. Applied to: <form>
+accept: Restricts uploaded file types.
+    Examples:
+        image/*
+        application/pdf
+        .pdf,.docx
+        video/*
+-->
+
+<!-- ========================================================= -->
+<!-- COMMON FORM ATTRIBUTES -->
+<!-- ========================================================= -->
+
+<!--
+id
+Unique identifier.
+
+Used with:
+<label for="">
+
+----------------------------
+
+name
+Submitted field name.
+
+----------------------------
+
+value
+Default value.
+
+----------------------------
+
+type
+Input type.
+
+----------------------------
+
+checked
+Default checked state.
+
+Works with:
+
+checkbox
+radio
+
+----------------------------
+
+selected
+Default selected option.
+
+Works with:
+<option>
+
+----------------------------
+
+min
+Minimum value.
+
+----------------------------
+
+max
+Maximum value.
+
+----------------------------
+
+step
+Increment value.
+
+Example:
+step="0.01"
+
+----------------------------
+
+rows
+Textarea rows.
+
+----------------------------
+
+cols
+Textarea columns.
+
+----------------------------
+
+size
+Visible width of an input.
+
+----------------------------
+
+list
+Connects an input to a <datalist>.
+
+----------------------------
+
+form
+Associates a control with another form.
+-->
+
+<!-- ========================================================= -->
+<!-- FORM SUBMISSION METHODS -->
+<!-- ========================================================= -->
+
+<!--
+GET
+
+✔ Appends data to URL
+✔ Can be bookmarked
+✔ Good for search forms
+✔ Cached by browsers
+
+✘ Not suitable for passwords
+✘ URL length limitation
+
+--------------------------------
+
+POST
+
+✔ Sends data in request body
+✔ Better for sensitive data
+✔ Login
+✔ Registration
+✔ Payments
+✔ File Upload
+✔ Large data
+
+For file uploads:
+
+enctype="multipart/form-data"
+-->
+
+<!-- ========================================================= -->
+<!-- ACCESSIBILITY -->
+<!-- ========================================================= -->
+
+<!--
+✔ Always use <label>.
+✔ Every input should have a unique id.
+✔ Match:
+
+<label for="email">
+<input id="email">
+
+✔ Use placeholder only as a hint.
+✔ Group related controls using: <fieldset>
+✔ Give groups a title using: <legend>
+✔ Ensure keyboard navigation works.
+✔ Maintain sufficient color contrast.
+✔ Show clear validation errors.
+✔ Use semantic HTML.
+-->
+
+<!-- ========================================================= -->
+<!-- BEST PRACTICES (2026) -->
+<!-- ========================================================= -->
+
+<!--
+✔ Use semantic HTML.
+✔ Choose the correct input type.
+✔ Use labels for every control.
+✔ Validate on both client and server.
+✔ Never rely only on client-side validation.
+✔ Prefer POST for sensitive data.
+✔ Use autocomplete where appropriate.
+✔ Restrict uploads using accept.
+✔ Keep forms short and simple.
+✔ Use meaningful button text.
+✔ Display clear validation messages.
+✔ Make forms mobile-friendly.
+✔ Use required only when necessary.
+✔ Minimize mandatory fields.
+✔ Preserve user input after validation errors.
+✔ Test using keyboard navigation.
+✔ Test with screen readers.
+-->
